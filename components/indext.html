@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Caasitech Accademy</title>
+
+</head>
+<body>
+    <i class="fas fa-bars menu-icon" onclick="toggleSidebar()"></i>
+    <header>
+        <img src="../assets/caasiAcLogo.jpg">
+        <nav class="navbar">
+            <i class="fas fa-times close-icon" onclick="toggleSidebar()"></i>
+            <ul>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Training</li>
+                <li>Programs</li>
+                <li>Contacts</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <button class="seePhotot">
+            Apply Now
+        </button>
+    </main>
+
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.querySelector('.navbar');
+            sidebar.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
