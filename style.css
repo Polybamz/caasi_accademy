@@ -1,7 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Flex:opsz,wght@8..144,100;8..144,500&family=Ruda&display=swap');
 
-
+.no {
+    font-size: large;
+}
 *{
     margin: 0;
     padding: 0;
