@@ -11,22 +11,69 @@
 <body>
     <i class="fas fa-bars menu-icon" onclick="toggleSidebar()"></i>
     <header>
-        <img src="assets/caasiAcLogo.jpg">
+        <img src="assets/caasiAcLogo.png">
         <nav class="navbar">
             <i class="fas fa-times close-icon" onclick="toggleSidebar()"></i>
             <ul>
                 <li>Home</li>
-                <li>About Us</li>
-                <li>Training</li>
-                <li>Programs</li>
+                <li><a href="#">About Us</a><i class="fa fa-caret-down" aria-hidden="true"></i>
+                    <div class="about-menu-item">
+                        <ul>
+                            <li>Testimonial</li>
+                            <li>Academy Website</li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">Training</a><i class="fa fa-caret-down" aria-hidden="true"></i>
+                   <div class="training-menu-item">
+                     <ul>
+                        <li>MWF Training</li>
+                        <li>Teams</li>
+                        <li>Hiring Cerimony</li>
+                     </ul>
+                   </div>
+                </li>
+                <li><a href="#">Programs</a><i class="fa fa-caret-down" aria-hidden="true"></i>
+                     <div class="programs-menu-items">
+                        <ul>
+                            <li>Employment</li>
+                            <li>Caasitech CSR</li>
+                        </ul>
+                     </div>
+                </li>
                 <li>Contacts</li>
             </ul>
         </nav>
-    </header>
-    <main>
         <button class="seePhotot">
             Apply Now
         </button>
+    </header>
+    <main>
+       
+        <img src="assets/pet2023.png" width="100%" >
+        <section class="row-data">
+       <div class="box-1"><h3>MWF Methodology</h3><p>The MWF methodology, in its uniqueness, creates and enhances a direct and proportional relationship between the employer and the employee</p></div>
+       <div class="box-2"><h3>Work with Us</h3><p>Through the Pre-employment Training Program we acquire talent in Africa and prepare them for the modern workforce.</p></div>
+       <div class="box-3"><h3>Outreach Programs</h3><p>Based on our motto, we keep impacting the communities where we operate with these carefully chosen programs that are meant to last.</p></div>
+       <div class="box-4"><h3>Events</h3><p>Please visit this page to learn what is coming up next at caasitech Academy</p></div>
+        </section>
+        <section class="text">
+            <h1 id="wltext">Welcome to Caasitech Academy</h1>
+            <p>Caasitech Group’s training section is Caasitech Academy. Here, we plan, recruit, and train future Caasitech and African talent. Our objective is to cultivate people that can thrive in the modern workforce (MWF).</p>
+        </section>
+        <div class="grid-container">
+            <div class="grid-item"><h1>2010</h1><p>Year Founded</p></div>
+            <div class="grid-item"><h1>312</h1><p>Total Trained</p></div>
+            <div class="grid-item"><h1>5</h1><p>Countries</p></div>
+            <div class="grid-item"><h1>10,200</h1><p>Training Models</p></div>
+           
+          </div>
+        <section class="count">
+            <div class="card1"></div>
+            <div class="card1"></div>
+            <div class="card1"></div>
+            <div class="card1"></div>
+        </section>
     </main>
 
     <script>
@@ -34,6 +81,7 @@
             var sidebar = document.querySelector('.navbar');
             sidebar.classList.toggle('open');
         }
+        
     </script>
 </body>
 </html>
