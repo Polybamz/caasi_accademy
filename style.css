@@ -374,7 +374,6 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  /* border: 1px solid white; */
   width: 100%;
 }
 .footer-card1 #h7 {
@@ -450,7 +449,33 @@ footer {
 .slider img:nth-child(6) {
   animation-delay: 20s;
 }
-
+.link-icons{
+  display: flex;
+  gap: 20px;
+}
+.link-icons i{
+  color: #473f3f;
+}
+.link-icons i:hover{
+  color: #ccc;
+}
+span{
+  color: white;
+  font-weight: bold;
+}
+span:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+.copyright{
+  width: 70%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.copyright p{
+  color: #ccc;
+  font-size:8px;
+}
 @keyframes slide {
   0% {
     opacity: 0;
@@ -576,6 +601,9 @@ footer {
     display: initial !important;
     top: 10px;
     left: 10px;
+  }
+  #h7{
+    text-align: start;
   }
 }
 
