@@ -25,6 +25,7 @@
             <div class="about-menu-item">
               <ul>
                 <li>Testimonial</li>
+                <div class="line-ui"></div>
                 <li>Academy Website</li>
               </ul>
             </div>
@@ -35,7 +36,9 @@
             <div class="training-menu-item">
               <ul>
                 <li>MWF Training</li>
+                <div class="line-ui"></div>
                 <li>Teams</li>
+                <div class="line-ui"></div>
                 <li>Hiring Cerimony</li>
               </ul>
             </div>
@@ -46,6 +49,7 @@
             <div class="programs-menu-items">
               <ul>
                 <li>Employment</li>
+                <div class="line-ui"></div>
                 <li>Caasitech CSR</li>
               </ul>
             </div>
@@ -99,19 +103,19 @@
       </section>
       <div class="grid-container">
         <div class="grid-item">
-          <h1>2010</h1>
+          <h1><span data-count="2010">0</span></h1>
           <p>Year Founded</p>
         </div>
         <div class="grid-item">
-          <h1>312</h1>
+          <h1><span data-count="312">0</span></h1>
           <p>Total Trained</p>
         </div>
         <div class="grid-item">
-          <h1>5</h1>
+          <h1><span data-count="5">0</span></h1>
           <p>Countries</p>
         </div>
         <div class="grid-item">
-          <h1>10,200</h1>
+          <h1><span data-count="10200">0</span></h1>
           <p>Training Models</p>
         </div>
       </div>
@@ -153,7 +157,7 @@
 <h1>Join the Modern Workforce (MWF)</h1>
 <p>Take advantage of the job roles that are highly needed and of interest to millions worldwide.</p>
 <div class="btn">
-    <button class="learn-more">Apply Now</button>
+   <a href="apply_now.html"> <button class="learn-more">Apply Now</button></a>
     <button class="learn-more">Testimonial</button>
 </div>
       </section>
@@ -209,6 +213,56 @@
     </footer>
 
     <script>
+const counters = document.querySelectorAll('.grid-container span');
+const container = document.querySelector('.grid-container');
+let activated = false;
+
+window.addEventListener('scroll', () => {
+    if (window.pageXOffset > container.offsetTop - container.offsetHeight - 100 && activated === false) {
+        counters.forEach(counter => {
+            counter.innerText = 0;
+            let count = 0;
+            function updateCounter() {
+                count++;
+                counter.innerText = count;
+            }
+            setInterval(updateCounter, 1000);
+        });
+        activated = true;
+    } 
+}); 
+
+
+
+
+            
+
+// window.addEventListener('scroll', () => {
+//   if (pageXOffset > container.offsetTop - container.offsetHeight - 100 && activated === false) {
+//     counters.forEach(counter => {
+//       counter.innerText = 0;
+//       let count = 0;
+//       function updateCounter() {
+//         const target = parseInt(counter.dataset.count);
+//         if (count < target) {
+//           count++;
+//           counter.innerText = count;
+//           setTimeout(updateCounter, 1000);
+//         } else {
+//           counter.innerText = target;
+//         }
+//       }
+//       updateCounter();
+//       activated = true;
+//     });
+//   } else if (pageXOffset < container.offsetTop - container.offsetHeight - 100 || pageXOffset === 0 && activated === true) {
+//     counters.forEach(counter => {
+//       counter.innerText = 0;
+//     });
+//     activated = false;
+//   }
+// });
+
       function toggleSidebar() {
         var sidebar = document.querySelector(".navbar");
         sidebar.classList.toggle("open");
